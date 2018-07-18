@@ -13,18 +13,17 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import vector3d_pb2
-from . import axis_pb2
-from . import pose_pb2
-from . import sensor_pb2
+import axis_pb2
+import pose_pb2
+import sensor_pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='joint.proto',
   package='gazebo.msgs',
-  serialized_pb=_b('\n\x0bjoint.proto\x12\x0bgazebo.msgs\x1a\x0evector3d.proto\x1a\naxis.proto\x1a\npose.proto\x1a\x0csensor.proto\"\xa5\x04\n\x05Joint\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\n\n\x02id\x18\x02 \x01(\r\x12\r\n\x05\x61ngle\x18\x03 \x03(\x01\x12%\n\x04type\x18\x04 \x01(\x0e\x32\x17.gazebo.msgs.Joint.Type\x12\x0e\n\x06parent\x18\x05 \x01(\t\x12\x11\n\tparent_id\x18\x06 \x01(\r\x12\r\n\x05\x63hild\x18\x07 \x01(\t\x12\x10\n\x08\x63hild_id\x18\x08 \x01(\r\x12\x1f\n\x04pose\x18\t \x01(\x0b\x32\x11.gazebo.msgs.Pose\x12 \n\x05\x61xis1\x18\n \x01(\x0b\x32\x11.gazebo.msgs.Axis\x12 \n\x05\x61xis2\x18\x0b \x01(\x0b\x32\x11.gazebo.msgs.Axis\x12\x0b\n\x03\x63\x66m\x18\x0c \x01(\x01\x12\x0e\n\x06\x62ounce\x18\r \x01(\x01\x12\x10\n\x08velocity\x18\x0e \x01(\x01\x12\x14\n\x0c\x66udge_factor\x18\x0f \x01(\x01\x12\x11\n\tlimit_cfm\x18\x10 \x01(\x01\x12\x11\n\tlimit_erp\x18\x11 \x01(\x01\x12\x16\n\x0esuspension_cfm\x18\x12 \x01(\x01\x12\x16\n\x0esuspension_erp\x18\x13 \x01(\x01\x12#\n\x06sensor\x18\x14 \x03(\x0b\x32\x13.gazebo.msgs.Sensor\"c\n\x04Type\x12\x0c\n\x08REVOLUTE\x10\x01\x12\r\n\tREVOLUTE2\x10\x02\x12\r\n\tPRISMATIC\x10\x03\x12\r\n\tUNIVERSAL\x10\x04\x12\x08\n\x04\x42\x41LL\x10\x05\x12\t\n\x05SCREW\x10\x06\x12\x0b\n\x07GEARBOX\x10\x07')
+  serialized_pb=_b('\n\x0bjoint.proto\x12\x0bgazebo.msgs\x1a\naxis.proto\x1a\npose.proto\x1a\x0csensor.proto\"\xe7\x05\n\x05Joint\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\n\n\x02id\x18\x02 \x01(\r\x12\r\n\x05\x61ngle\x18\x03 \x03(\x01\x12%\n\x04type\x18\x04 \x01(\x0e\x32\x17.gazebo.msgs.Joint.Type\x12\x0e\n\x06parent\x18\x05 \x01(\t\x12\x11\n\tparent_id\x18\x06 \x01(\r\x12\r\n\x05\x63hild\x18\x07 \x01(\t\x12\x10\n\x08\x63hild_id\x18\x08 \x01(\r\x12\x1f\n\x04pose\x18\t \x01(\x0b\x32\x11.gazebo.msgs.Pose\x12 \n\x05\x61xis1\x18\n \x01(\x0b\x32\x11.gazebo.msgs.Axis\x12 \n\x05\x61xis2\x18\x0b \x01(\x0b\x32\x11.gazebo.msgs.Axis\x12\x0b\n\x03\x63\x66m\x18\x0c \x01(\x01\x12\x0e\n\x06\x62ounce\x18\r \x01(\x01\x12\x10\n\x08velocity\x18\x0e \x01(\x01\x12\x14\n\x0c\x66udge_factor\x18\x0f \x01(\x01\x12\x11\n\tlimit_cfm\x18\x10 \x01(\x01\x12\x11\n\tlimit_erp\x18\x11 \x01(\x01\x12\x16\n\x0esuspension_cfm\x18\x12 \x01(\x01\x12\x16\n\x0esuspension_erp\x18\x13 \x01(\x01\x12+\n\x07gearbox\x18\x14 \x01(\x0b\x32\x1a.gazebo.msgs.Joint.Gearbox\x12\'\n\x05screw\x18\x15 \x01(\x0b\x32\x18.gazebo.msgs.Joint.Screw\x12#\n\x06sensor\x18\x16 \x03(\x0b\x32\x13.gazebo.msgs.Sensor\x1a@\n\x07Gearbox\x12\x1e\n\x16gearbox_reference_body\x18\x01 \x02(\t\x12\x15\n\rgearbox_ratio\x18\x02 \x02(\x01\x1a\x1d\n\x05Screw\x12\x14\n\x0cthread_pitch\x18\x01 \x02(\x01\"n\n\x04Type\x12\x0c\n\x08REVOLUTE\x10\x01\x12\r\n\tREVOLUTE2\x10\x02\x12\r\n\tPRISMATIC\x10\x03\x12\r\n\tUNIVERSAL\x10\x04\x12\x08\n\x04\x42\x41LL\x10\x05\x12\t\n\x05SCREW\x10\x06\x12\x0b\n\x07GEARBOX\x10\x07\x12\t\n\x05\x46IXED\x10\x08')
   ,
-  dependencies=[vector3d_pb2.DESCRIPTOR,axis_pb2.DESCRIPTOR,pose_pb2.DESCRIPTOR,sensor_pb2.DESCRIPTOR,])
+  dependencies=[axis_pb2.DESCRIPTOR,pose_pb2.DESCRIPTOR,sensor_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -63,14 +62,83 @@ _JOINT_TYPE = _descriptor.EnumDescriptor(
       name='GEARBOX', index=6, number=7,
       options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FIXED', index=7, number=8,
+      options=None,
+      type=None),
   ],
   containing_type=None,
   options=None,
-  serialized_start=533,
-  serialized_end=632,
+  serialized_start=700,
+  serialized_end=810,
 )
 _sym_db.RegisterEnumDescriptor(_JOINT_TYPE)
 
+
+_JOINT_GEARBOX = _descriptor.Descriptor(
+  name='Gearbox',
+  full_name='gazebo.msgs.Joint.Gearbox',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='gearbox_reference_body', full_name='gazebo.msgs.Joint.Gearbox.gearbox_reference_body', index=0,
+      number=1, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='gearbox_ratio', full_name='gazebo.msgs.Joint.Gearbox.gearbox_ratio', index=1,
+      number=2, type=1, cpp_type=5, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=603,
+  serialized_end=667,
+)
+
+_JOINT_SCREW = _descriptor.Descriptor(
+  name='Screw',
+  full_name='gazebo.msgs.Joint.Screw',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='thread_pitch', full_name='gazebo.msgs.Joint.Screw.thread_pitch', index=0,
+      number=1, type=1, cpp_type=5, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=669,
+  serialized_end=698,
+)
 
 _JOINT = _descriptor.Descriptor(
   name='Joint',
@@ -213,8 +281,22 @@ _JOINT = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='sensor', full_name='gazebo.msgs.Joint.sensor', index=19,
-      number=20, type=11, cpp_type=10, label=3,
+      name='gearbox', full_name='gazebo.msgs.Joint.gearbox', index=19,
+      number=20, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='screw', full_name='gazebo.msgs.Joint.screw', index=20,
+      number=21, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='sensor', full_name='gazebo.msgs.Joint.sensor', index=21,
+      number=22, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -222,7 +304,7 @@ _JOINT = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[],
+  nested_types=[_JOINT_GEARBOX, _JOINT_SCREW, ],
   enum_types=[
     _JOINT_TYPE,
   ],
@@ -231,24 +313,44 @@ _JOINT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=83,
-  serialized_end=632,
+  serialized_start=67,
+  serialized_end=810,
 )
 
+_JOINT_GEARBOX.containing_type = _JOINT
+_JOINT_SCREW.containing_type = _JOINT
 _JOINT.fields_by_name['type'].enum_type = _JOINT_TYPE
 _JOINT.fields_by_name['pose'].message_type = pose_pb2._POSE
 _JOINT.fields_by_name['axis1'].message_type = axis_pb2._AXIS
 _JOINT.fields_by_name['axis2'].message_type = axis_pb2._AXIS
+_JOINT.fields_by_name['gearbox'].message_type = _JOINT_GEARBOX
+_JOINT.fields_by_name['screw'].message_type = _JOINT_SCREW
 _JOINT.fields_by_name['sensor'].message_type = sensor_pb2._SENSOR
 _JOINT_TYPE.containing_type = _JOINT
 DESCRIPTOR.message_types_by_name['Joint'] = _JOINT
 
 Joint = _reflection.GeneratedProtocolMessageType('Joint', (_message.Message,), dict(
+
+  Gearbox = _reflection.GeneratedProtocolMessageType('Gearbox', (_message.Message,), dict(
+    DESCRIPTOR = _JOINT_GEARBOX,
+    __module__ = 'joint_pb2'
+    # @@protoc_insertion_point(class_scope:gazebo.msgs.Joint.Gearbox)
+    ))
+  ,
+
+  Screw = _reflection.GeneratedProtocolMessageType('Screw', (_message.Message,), dict(
+    DESCRIPTOR = _JOINT_SCREW,
+    __module__ = 'joint_pb2'
+    # @@protoc_insertion_point(class_scope:gazebo.msgs.Joint.Screw)
+    ))
+  ,
   DESCRIPTOR = _JOINT,
   __module__ = 'joint_pb2'
   # @@protoc_insertion_point(class_scope:gazebo.msgs.Joint)
   ))
 _sym_db.RegisterMessage(Joint)
+_sym_db.RegisterMessage(Joint.Gearbox)
+_sym_db.RegisterMessage(Joint.Screw)
 
 
 # @@protoc_insertion_point(module_scope)

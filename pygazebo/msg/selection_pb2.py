@@ -13,15 +13,13 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import header_pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='selection.proto',
   package='gazebo.msgs',
-  serialized_pb=_b('\n\x0fselection.proto\x12\x0bgazebo.msgs\x1a\x0cheader.proto\">\n\tSelection\x12\n\n\x02id\x18\x01 \x02(\r\x12\x0c\n\x04name\x18\x02 \x02(\t\x12\x17\n\x08selected\x18\x03 \x01(\x08:\x05\x66\x61lse')
-  ,
-  dependencies=[header_pb2.DESCRIPTOR,])
+  serialized_pb=_b('\n\x0fselection.proto\x12\x0bgazebo.msgs\">\n\tSelection\x12\n\n\x02id\x18\x01 \x02(\r\x12\x0c\n\x04name\x18\x02 \x02(\t\x12\x17\n\x08selected\x18\x03 \x01(\x08:\x05\x66\x61lse')
+)
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -66,8 +64,8 @@ _SELECTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=46,
-  serialized_end=108,
+  serialized_start=32,
+  serialized_end=94,
 )
 
 DESCRIPTOR.message_types_by_name['Selection'] = _SELECTION

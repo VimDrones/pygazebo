@@ -13,15 +13,13 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import header_pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='vector2d.proto',
   package='gazebo.msgs',
-  serialized_pb=_b('\n\x0evector2d.proto\x12\x0bgazebo.msgs\x1a\x0cheader.proto\" \n\x08Vector2d\x12\t\n\x01x\x18\x01 \x02(\x01\x12\t\n\x01y\x18\x02 \x02(\x01')
-  ,
-  dependencies=[header_pb2.DESCRIPTOR,])
+  serialized_pb=_b('\n\x0evector2d.proto\x12\x0bgazebo.msgs\" \n\x08Vector2d\x12\t\n\x01x\x18\x01 \x02(\x01\x12\t\n\x01y\x18\x02 \x02(\x01')
+)
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -59,8 +57,8 @@ _VECTOR2D = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=45,
-  serialized_end=77,
+  serialized_start=31,
+  serialized_end=63,
 )
 
 DESCRIPTOR.message_types_by_name['Vector2d'] = _VECTOR2D

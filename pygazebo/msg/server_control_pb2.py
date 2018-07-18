@@ -13,15 +13,13 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import header_pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='server_control.proto',
   package='gazebo.msgs',
-  serialized_pb=_b('\n\x14server_control.proto\x12\x0bgazebo.msgs\x1a\x0cheader.proto\"w\n\rServerControl\x12\x17\n\x0fsave_world_name\x18\x01 \x01(\t\x12\x15\n\rsave_filename\x18\x02 \x01(\t\x12\x15\n\ropen_filename\x18\x03 \x01(\t\x12\x11\n\tnew_world\x18\x04 \x01(\x08\x12\x0c\n\x04stop\x18\x05 \x01(\x08')
-  ,
-  dependencies=[header_pb2.DESCRIPTOR,])
+  serialized_pb=_b('\n\x14server_control.proto\x12\x0bgazebo.msgs\"\x98\x01\n\rServerControl\x12\x17\n\x0fsave_world_name\x18\x01 \x01(\t\x12\x15\n\rsave_filename\x18\x02 \x01(\t\x12\x15\n\ropen_filename\x18\x03 \x01(\t\x12\x11\n\tnew_world\x18\x04 \x01(\x08\x12\x0c\n\x04stop\x18\x05 \x01(\x08\x12\r\n\x05\x63lone\x18\x06 \x01(\x08\x12\x10\n\x08new_port\x18\x07 \x01(\r')
+)
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -69,6 +67,20 @@ _SERVERCONTROL = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='clone', full_name='gazebo.msgs.ServerControl.clone', index=5,
+      number=6, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='new_port', full_name='gazebo.msgs.ServerControl.new_port', index=6,
+      number=7, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -80,8 +92,8 @@ _SERVERCONTROL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=51,
-  serialized_end=170,
+  serialized_start=38,
+  serialized_end=190,
 )
 
 DESCRIPTOR.message_types_by_name['ServerControl'] = _SERVERCONTROL

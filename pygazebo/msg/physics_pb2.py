@@ -13,16 +13,15 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import vector3d_pb2
-from . import header_pb2
+import vector3d_pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='physics.proto',
   package='gazebo.msgs',
-  serialized_pb=_b('\n\rphysics.proto\x12\x0bgazebo.msgs\x1a\x0evector3d.proto\x1a\x0cheader.proto\"\xb6\x03\n\x07Physics\x12,\n\x04type\x18\x01 \x01(\x0e\x32\x19.gazebo.msgs.Physics.Type:\x03ODE\x12\x13\n\x0bsolver_type\x18\x02 \x01(\t\x12\x15\n\rmin_step_size\x18\x03 \x01(\x01\x12\x14\n\x0cprecon_iters\x18\x04 \x01(\x05\x12\r\n\x05iters\x18\x05 \x01(\x05\x12\x0b\n\x03sor\x18\x06 \x01(\x01\x12\x0b\n\x03\x63\x66m\x18\x07 \x01(\x01\x12\x0b\n\x03\x65rp\x18\x08 \x01(\x01\x12\"\n\x1a\x63ontact_max_correcting_vel\x18\t \x01(\x01\x12\x1d\n\x15\x63ontact_surface_layer\x18\n \x01(\x01\x12&\n\x07gravity\x18\x0b \x01(\x0b\x32\x15.gazebo.msgs.Vector3d\x12\x16\n\x0e\x65nable_physics\x18\x0c \x01(\x08\x12\x18\n\x10real_time_factor\x18\r \x01(\x01\x12\x1d\n\x15real_time_update_rate\x18\x0e \x01(\x01\x12\x15\n\rmax_step_size\x18\x0f \x01(\x01\"2\n\x04Type\x12\x07\n\x03ODE\x10\x01\x12\n\n\x06\x42ULLET\x10\x02\x12\x0b\n\x07SIMBODY\x10\x03\x12\x08\n\x04\x44\x41RT\x10\x04')
+  serialized_pb=_b('\n\rphysics.proto\x12\x0bgazebo.msgs\x1a\x0evector3d.proto\"\xfb\x03\n\x07Physics\x12,\n\x04type\x18\x01 \x01(\x0e\x32\x19.gazebo.msgs.Physics.Type:\x03ODE\x12\x13\n\x0bsolver_type\x18\x02 \x01(\t\x12\x15\n\rmin_step_size\x18\x03 \x01(\x01\x12\x14\n\x0cprecon_iters\x18\x04 \x01(\x05\x12\r\n\x05iters\x18\x05 \x01(\x05\x12\x0b\n\x03sor\x18\x06 \x01(\x01\x12\x0b\n\x03\x63\x66m\x18\x07 \x01(\x01\x12\x0b\n\x03\x65rp\x18\x08 \x01(\x01\x12\"\n\x1a\x63ontact_max_correcting_vel\x18\t \x01(\x01\x12\x1d\n\x15\x63ontact_surface_layer\x18\n \x01(\x01\x12&\n\x07gravity\x18\x0b \x01(\x0b\x32\x15.gazebo.msgs.Vector3d\x12\x16\n\x0e\x65nable_physics\x18\x0c \x01(\x08\x12\x18\n\x10real_time_factor\x18\r \x01(\x01\x12\x1d\n\x15real_time_update_rate\x18\x0e \x01(\x01\x12\x15\n\rmax_step_size\x18\x0f \x01(\x01\x12\x14\n\x0cprofile_name\x18\x10 \x01(\t\x12-\n\x0emagnetic_field\x18\x11 \x01(\x0b\x32\x15.gazebo.msgs.Vector3d\"2\n\x04Type\x12\x07\n\x03ODE\x10\x01\x12\n\n\x06\x42ULLET\x10\x02\x12\x0b\n\x07SIMBODY\x10\x03\x12\x08\n\x04\x44\x41RT\x10\x04')
   ,
-  dependencies=[vector3d_pb2.DESCRIPTOR,header_pb2.DESCRIPTOR,])
+  dependencies=[vector3d_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -52,8 +51,8 @@ _PHYSICS_TYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=449,
-  serialized_end=499,
+  serialized_start=504,
+  serialized_end=554,
 )
 _sym_db.RegisterEnumDescriptor(_PHYSICS_TYPE)
 
@@ -170,6 +169,20 @@ _PHYSICS = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='profile_name', full_name='gazebo.msgs.Physics.profile_name', index=15,
+      number=16, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='magnetic_field', full_name='gazebo.msgs.Physics.magnetic_field', index=16,
+      number=17, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -182,12 +195,13 @@ _PHYSICS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=61,
-  serialized_end=499,
+  serialized_start=47,
+  serialized_end=554,
 )
 
 _PHYSICS.fields_by_name['type'].enum_type = _PHYSICS_TYPE
 _PHYSICS.fields_by_name['gravity'].message_type = vector3d_pb2._VECTOR3D
+_PHYSICS.fields_by_name['magnetic_field'].message_type = vector3d_pb2._VECTOR3D
 _PHYSICS_TYPE.containing_type = _PHYSICS
 DESCRIPTOR.message_types_by_name['Physics'] = _PHYSICS
 

@@ -13,21 +13,23 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import header_pb2
-from . import inertial_pb2
-from . import collision_pb2
-from . import visual_pb2
-from . import sensor_pb2
-from . import projector_pb2
-from . import pose_pb2
+import inertial_pb2
+import collision_pb2
+import visual_pb2
+import sensor_pb2
+import projector_pb2
+import pose_pb2
+import battery_pb2
+import density_pb2
+import vector3d_pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='link.proto',
   package='gazebo.msgs',
-  serialized_pb=_b('\n\nlink.proto\x12\x0bgazebo.msgs\x1a\x0cheader.proto\x1a\x0einertial.proto\x1a\x0f\x63ollision.proto\x1a\x0cvisual.proto\x1a\x0csensor.proto\x1a\x0fprojector.proto\x1a\npose.proto\"\xe8\x02\n\x04Link\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x02(\t\x12\x14\n\x0cself_collide\x18\x03 \x01(\x08\x12\x0f\n\x07gravity\x18\x04 \x01(\x08\x12\x11\n\tkinematic\x18\x05 \x01(\x08\x12\x0f\n\x07\x65nabled\x18\x06 \x01(\x08\x12\'\n\x08inertial\x18\x07 \x01(\x0b\x32\x15.gazebo.msgs.Inertial\x12\x1f\n\x04pose\x18\x08 \x01(\x0b\x32\x11.gazebo.msgs.Pose\x12#\n\x06visual\x18\t \x03(\x0b\x32\x13.gazebo.msgs.Visual\x12)\n\tcollision\x18\n \x03(\x0b\x32\x16.gazebo.msgs.Collision\x12#\n\x06sensor\x18\x0b \x03(\x0b\x32\x13.gazebo.msgs.Sensor\x12)\n\tprojector\x18\x0c \x03(\x0b\x32\x16.gazebo.msgs.Projector\x12\x11\n\tcanonical\x18\r \x01(\x08')
+  serialized_pb=_b('\n\nlink.proto\x12\x0bgazebo.msgs\x1a\x0einertial.proto\x1a\x0f\x63ollision.proto\x1a\x0cvisual.proto\x1a\x0csensor.proto\x1a\x0fprojector.proto\x1a\npose.proto\x1a\rbattery.proto\x1a\rdensity.proto\x1a\x0evector3d.proto\"\xf0\x03\n\x04Link\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x02(\t\x12\x14\n\x0cself_collide\x18\x03 \x01(\x08\x12\x0f\n\x07gravity\x18\x04 \x01(\x08\x12\x11\n\tkinematic\x18\x05 \x01(\x08\x12\x0f\n\x07\x65nabled\x18\x06 \x01(\x08\x12%\n\x07\x64\x65nsity\x18\x07 \x01(\x0b\x32\x14.gazebo.msgs.Density\x12\'\n\x08inertial\x18\x08 \x01(\x0b\x32\x15.gazebo.msgs.Inertial\x12\x1f\n\x04pose\x18\t \x01(\x0b\x32\x11.gazebo.msgs.Pose\x12#\n\x06visual\x18\n \x03(\x0b\x32\x13.gazebo.msgs.Visual\x12)\n\tcollision\x18\x0b \x03(\x0b\x32\x16.gazebo.msgs.Collision\x12#\n\x06sensor\x18\x0c \x03(\x0b\x32\x13.gazebo.msgs.Sensor\x12)\n\tprojector\x18\r \x03(\x0b\x32\x16.gazebo.msgs.Projector\x12\x11\n\tcanonical\x18\x0e \x01(\x08\x12%\n\x07\x62\x61ttery\x18\x0f \x03(\x0b\x32\x14.gazebo.msgs.Battery\x12\x13\n\x0b\x65nable_wind\x18\x10 \x01(\x08\x12#\n\x04wind\x18\x11 \x01(\x0b\x32\x15.gazebo.msgs.Vector3d')
   ,
-  dependencies=[header_pb2.DESCRIPTOR,inertial_pb2.DESCRIPTOR,collision_pb2.DESCRIPTOR,visual_pb2.DESCRIPTOR,sensor_pb2.DESCRIPTOR,projector_pb2.DESCRIPTOR,pose_pb2.DESCRIPTOR,])
+  dependencies=[inertial_pb2.DESCRIPTOR,collision_pb2.DESCRIPTOR,visual_pb2.DESCRIPTOR,sensor_pb2.DESCRIPTOR,projector_pb2.DESCRIPTOR,pose_pb2.DESCRIPTOR,battery_pb2.DESCRIPTOR,density_pb2.DESCRIPTOR,vector3d_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -83,51 +85,79 @@ _LINK = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='inertial', full_name='gazebo.msgs.Link.inertial', index=6,
+      name='density', full_name='gazebo.msgs.Link.density', index=6,
       number=7, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='pose', full_name='gazebo.msgs.Link.pose', index=7,
+      name='inertial', full_name='gazebo.msgs.Link.inertial', index=7,
       number=8, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='visual', full_name='gazebo.msgs.Link.visual', index=8,
-      number=9, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
+      name='pose', full_name='gazebo.msgs.Link.pose', index=8,
+      number=9, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='collision', full_name='gazebo.msgs.Link.collision', index=9,
+      name='visual', full_name='gazebo.msgs.Link.visual', index=9,
       number=10, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='sensor', full_name='gazebo.msgs.Link.sensor', index=10,
+      name='collision', full_name='gazebo.msgs.Link.collision', index=10,
       number=11, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='projector', full_name='gazebo.msgs.Link.projector', index=11,
+      name='sensor', full_name='gazebo.msgs.Link.sensor', index=11,
       number=12, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='canonical', full_name='gazebo.msgs.Link.canonical', index=12,
-      number=13, type=8, cpp_type=7, label=1,
+      name='projector', full_name='gazebo.msgs.Link.projector', index=12,
+      number=13, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='canonical', full_name='gazebo.msgs.Link.canonical', index=13,
+      number=14, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='battery', full_name='gazebo.msgs.Link.battery', index=14,
+      number=15, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='enable_wind', full_name='gazebo.msgs.Link.enable_wind', index=15,
+      number=16, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='wind', full_name='gazebo.msgs.Link.wind', index=16,
+      number=17, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -142,16 +172,19 @@ _LINK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=132,
-  serialized_end=492,
+  serialized_start=164,
+  serialized_end=660,
 )
 
+_LINK.fields_by_name['density'].message_type = density_pb2._DENSITY
 _LINK.fields_by_name['inertial'].message_type = inertial_pb2._INERTIAL
 _LINK.fields_by_name['pose'].message_type = pose_pb2._POSE
 _LINK.fields_by_name['visual'].message_type = visual_pb2._VISUAL
 _LINK.fields_by_name['collision'].message_type = collision_pb2._COLLISION
 _LINK.fields_by_name['sensor'].message_type = sensor_pb2._SENSOR
 _LINK.fields_by_name['projector'].message_type = projector_pb2._PROJECTOR
+_LINK.fields_by_name['battery'].message_type = battery_pb2._BATTERY
+_LINK.fields_by_name['wind'].message_type = vector3d_pb2._VECTOR3D
 DESCRIPTOR.message_types_by_name['Link'] = _LINK
 
 Link = _reflection.GeneratedProtocolMessageType('Link', (_message.Message,), dict(

@@ -13,16 +13,15 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import header_pb2
-from . import pose_pb2
+import pose_pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='factory.proto',
   package='gazebo.msgs',
-  serialized_pb=_b('\n\rfactory.proto\x12\x0bgazebo.msgs\x1a\x0cheader.proto\x1a\npose.proto\"z\n\x07\x46\x61\x63tory\x12\x0b\n\x03sdf\x18\x01 \x01(\t\x12\x14\n\x0csdf_filename\x18\x02 \x01(\t\x12\x1f\n\x04pose\x18\x03 \x01(\x0b\x32\x11.gazebo.msgs.Pose\x12\x11\n\tedit_name\x18\x04 \x01(\t\x12\x18\n\x10\x63lone_model_name\x18\x05 \x01(\t')
+  serialized_pb=_b('\n\rfactory.proto\x12\x0bgazebo.msgs\x1a\npose.proto\"\x98\x01\n\x07\x46\x61\x63tory\x12\x0b\n\x03sdf\x18\x01 \x01(\t\x12\x14\n\x0csdf_filename\x18\x02 \x01(\t\x12\x1f\n\x04pose\x18\x03 \x01(\x0b\x32\x11.gazebo.msgs.Pose\x12\x11\n\tedit_name\x18\x04 \x01(\t\x12\x18\n\x10\x63lone_model_name\x18\x05 \x01(\t\x12\x1c\n\x0e\x61llow_renaming\x18\x06 \x01(\x08:\x04true')
   ,
-  dependencies=[header_pb2.DESCRIPTOR,pose_pb2.DESCRIPTOR,])
+  dependencies=[pose_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -70,6 +69,13 @@ _FACTORY = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='allow_renaming', full_name='gazebo.msgs.Factory.allow_renaming', index=5,
+      number=6, type=8, cpp_type=7, label=1,
+      has_default_value=True, default_value=True,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -81,8 +87,8 @@ _FACTORY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=56,
-  serialized_end=178,
+  serialized_start=43,
+  serialized_end=195,
 )
 
 _FACTORY.fields_by_name['pose'].message_type = pose_pb2._POSE

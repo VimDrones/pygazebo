@@ -13,19 +13,20 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import joint_pb2
-from . import link_pb2
-from . import pose_pb2
-from . import visual_pb2
-from . import vector3d_pb2
+import joint_pb2
+import link_pb2
+import plugin_pb2
+import pose_pb2
+import visual_pb2
+import vector3d_pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='model.proto',
   package='gazebo.msgs',
-  serialized_pb=_b('\n\x0bmodel.proto\x12\x0bgazebo.msgs\x1a\x0bjoint.proto\x1a\nlink.proto\x1a\npose.proto\x1a\x0cvisual.proto\x1a\x0evector3d.proto\"\xf5\x01\n\x05Model\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\n\n\x02id\x18\x02 \x01(\r\x12\x11\n\tis_static\x18\x03 \x01(\x08\x12\x1f\n\x04pose\x18\x04 \x01(\x0b\x32\x11.gazebo.msgs.Pose\x12!\n\x05joint\x18\x05 \x03(\x0b\x32\x12.gazebo.msgs.Joint\x12\x1f\n\x04link\x18\x06 \x03(\x0b\x32\x11.gazebo.msgs.Link\x12\x0f\n\x07\x64\x65leted\x18\x07 \x01(\x08\x12#\n\x06visual\x18\x08 \x03(\x0b\x32\x13.gazebo.msgs.Visual\x12$\n\x05scale\x18\t \x01(\x0b\x32\x15.gazebo.msgs.Vector3d')
+  serialized_pb=_b('\n\x0bmodel.proto\x12\x0bgazebo.msgs\x1a\x0bjoint.proto\x1a\nlink.proto\x1a\x0cplugin.proto\x1a\npose.proto\x1a\x0cvisual.proto\x1a\x0evector3d.proto\"\xe8\x02\n\x05Model\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\n\n\x02id\x18\x02 \x01(\r\x12\x11\n\tis_static\x18\x03 \x01(\x08\x12\x1f\n\x04pose\x18\x04 \x01(\x0b\x32\x11.gazebo.msgs.Pose\x12!\n\x05joint\x18\x05 \x03(\x0b\x32\x12.gazebo.msgs.Joint\x12\x1f\n\x04link\x18\x06 \x03(\x0b\x32\x11.gazebo.msgs.Link\x12\x0f\n\x07\x64\x65leted\x18\x07 \x01(\x08\x12#\n\x06visual\x18\x08 \x03(\x0b\x32\x13.gazebo.msgs.Visual\x12$\n\x05scale\x18\t \x01(\x0b\x32\x15.gazebo.msgs.Vector3d\x12\x14\n\x0cself_collide\x18\n \x01(\x08\x12\x13\n\x0b\x65nable_wind\x18\x0b \x01(\x08\x12!\n\x05model\x18\x0c \x03(\x0b\x32\x12.gazebo.msgs.Model\x12#\n\x06plugin\x18\r \x03(\x0b\x32\x13.gazebo.msgs.Plugin')
   ,
-  dependencies=[joint_pb2.DESCRIPTOR,link_pb2.DESCRIPTOR,pose_pb2.DESCRIPTOR,visual_pb2.DESCRIPTOR,vector3d_pb2.DESCRIPTOR,])
+  dependencies=[joint_pb2.DESCRIPTOR,link_pb2.DESCRIPTOR,plugin_pb2.DESCRIPTOR,pose_pb2.DESCRIPTOR,visual_pb2.DESCRIPTOR,vector3d_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -101,6 +102,34 @@ _MODEL = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='self_collide', full_name='gazebo.msgs.Model.self_collide', index=9,
+      number=10, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='enable_wind', full_name='gazebo.msgs.Model.enable_wind', index=10,
+      number=11, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='model', full_name='gazebo.msgs.Model.model', index=11,
+      number=12, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='plugin', full_name='gazebo.msgs.Model.plugin', index=12,
+      number=13, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -112,8 +141,8 @@ _MODEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=96,
-  serialized_end=341,
+  serialized_start=110,
+  serialized_end=470,
 )
 
 _MODEL.fields_by_name['pose'].message_type = pose_pb2._POSE
@@ -121,6 +150,8 @@ _MODEL.fields_by_name['joint'].message_type = joint_pb2._JOINT
 _MODEL.fields_by_name['link'].message_type = link_pb2._LINK
 _MODEL.fields_by_name['visual'].message_type = visual_pb2._VISUAL
 _MODEL.fields_by_name['scale'].message_type = vector3d_pb2._VECTOR3D
+_MODEL.fields_by_name['model'].message_type = _MODEL
+_MODEL.fields_by_name['plugin'].message_type = plugin_pb2._PLUGIN
 DESCRIPTOR.message_types_by_name['Model'] = _MODEL
 
 Model = _reflection.GeneratedProtocolMessageType('Model', (_message.Message,), dict(

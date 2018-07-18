@@ -13,15 +13,16 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import vector3d_pb2
+import vector3d_pb2
+import material_pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='road.proto',
   package='gazebo.msgs',
-  serialized_pb=_b('\n\nroad.proto\x12\x0bgazebo.msgs\x1a\x0evector3d.proto\"I\n\x04Road\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\r\n\x05width\x18\x02 \x02(\x01\x12$\n\x05point\x18\x03 \x03(\x0b\x32\x15.gazebo.msgs.Vector3d')
+  serialized_pb=_b('\n\nroad.proto\x12\x0bgazebo.msgs\x1a\x0evector3d.proto\x1a\x0ematerial.proto\"r\n\x04Road\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\r\n\x05width\x18\x02 \x02(\x01\x12$\n\x05point\x18\x03 \x03(\x0b\x32\x15.gazebo.msgs.Vector3d\x12\'\n\x08material\x18\x04 \x01(\x0b\x32\x15.gazebo.msgs.Material')
   ,
-  dependencies=[vector3d_pb2.DESCRIPTOR,])
+  dependencies=[vector3d_pb2.DESCRIPTOR,material_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -55,6 +56,13 @@ _ROAD = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='material', full_name='gazebo.msgs.Road.material', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -66,11 +74,12 @@ _ROAD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=43,
-  serialized_end=116,
+  serialized_start=59,
+  serialized_end=173,
 )
 
 _ROAD.fields_by_name['point'].message_type = vector3d_pb2._VECTOR3D
+_ROAD.fields_by_name['material'].message_type = material_pb2._MATERIAL
 DESCRIPTOR.message_types_by_name['Road'] = _ROAD
 
 Road = _reflection.GeneratedProtocolMessageType('Road', (_message.Message,), dict(

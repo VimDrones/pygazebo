@@ -13,15 +13,16 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import gui_camera_pb2
+import gui_camera_pb2
+import plugin_pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='gui.proto',
   package='gazebo.msgs',
-  serialized_pb=_b('\n\tgui.proto\x12\x0bgazebo.msgs\x1a\x10gui_camera.proto\"A\n\x03GUI\x12\x12\n\nfullscreen\x18\x01 \x01(\x08\x12&\n\x06\x63\x61mera\x18\x02 \x01(\x0b\x32\x16.gazebo.msgs.GUICamera')
+  serialized_pb=_b('\n\tgui.proto\x12\x0bgazebo.msgs\x1a\x10gui_camera.proto\x1a\x0cplugin.proto\"f\n\x03GUI\x12\x12\n\nfullscreen\x18\x01 \x01(\x08\x12&\n\x06\x63\x61mera\x18\x02 \x01(\x0b\x32\x16.gazebo.msgs.GUICamera\x12#\n\x06plugin\x18\x03 \x03(\x0b\x32\x13.gazebo.msgs.Plugin')
   ,
-  dependencies=[gui_camera_pb2.DESCRIPTOR,])
+  dependencies=[gui_camera_pb2.DESCRIPTOR,plugin_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -48,6 +49,13 @@ _GUI = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='plugin', full_name='gazebo.msgs.GUI.plugin', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -59,11 +67,12 @@ _GUI = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=44,
-  serialized_end=109,
+  serialized_start=58,
+  serialized_end=160,
 )
 
 _GUI.fields_by_name['camera'].message_type = gui_camera_pb2._GUICAMERA
+_GUI.fields_by_name['plugin'].message_type = plugin_pb2._PLUGIN
 DESCRIPTOR.message_types_by_name['GUI'] = _GUI
 
 GUI = _reflection.GeneratedProtocolMessageType('GUI', (_message.Message,), dict(

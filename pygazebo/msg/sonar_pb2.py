@@ -13,8 +13,8 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import pose_pb2
-from . import vector3d_pb2
+import pose_pb2
+import vector3d_pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(

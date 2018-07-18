@@ -13,15 +13,13 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import pose_pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='camera_cmd.proto',
   package='gazebo.msgs',
-  serialized_pb=_b('\n\x10\x63\x61mera_cmd.proto\x12\x0bgazebo.msgs\x1a\npose.proto\"!\n\tCameraCmd\x12\x14\n\x0c\x66ollow_model\x18\x01 \x01(\t')
-  ,
-  dependencies=[pose_pb2.DESCRIPTOR,])
+  serialized_pb=_b('\n\x10\x63\x61mera_cmd.proto\x12\x0bgazebo.msgs\"!\n\tCameraCmd\x12\x14\n\x0c\x66ollow_model\x18\x01 \x01(\t')
+)
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -52,8 +50,8 @@ _CAMERACMD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=45,
-  serialized_end=78,
+  serialized_start=33,
+  serialized_end=66,
 )
 
 DESCRIPTOR.message_types_by_name['CameraCmd'] = _CAMERACMD

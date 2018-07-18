@@ -13,14 +13,14 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import pose_pb2
-from . import track_visual_pb2
+import pose_pb2
+import track_visual_pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='gui_camera.proto',
   package='gazebo.msgs',
-  serialized_pb=_b('\n\x10gui_camera.proto\x12\x0bgazebo.msgs\x1a\npose.proto\x1a\x12track_visual.proto\"|\n\tGUICamera\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\x17\n\x0fview_controller\x18\x02 \x01(\t\x12\x1f\n\x04pose\x18\x03 \x01(\x0b\x32\x11.gazebo.msgs.Pose\x12\'\n\x05track\x18\x04 \x01(\x0b\x32\x18.gazebo.msgs.TrackVisual')
+  serialized_pb=_b('\n\x10gui_camera.proto\x12\x0bgazebo.msgs\x1a\npose.proto\x1a\x12track_visual.proto\"\x95\x01\n\tGUICamera\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\x17\n\x0fview_controller\x18\x02 \x01(\t\x12\x1f\n\x04pose\x18\x03 \x01(\x0b\x32\x11.gazebo.msgs.Pose\x12\'\n\x05track\x18\x04 \x01(\x0b\x32\x18.gazebo.msgs.TrackVisual\x12\x17\n\x0fprojection_type\x18\x05 \x01(\t')
   ,
   dependencies=[pose_pb2.DESCRIPTOR,track_visual_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -63,6 +63,13 @@ _GUICAMERA = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='projection_type', full_name='gazebo.msgs.GUICamera.projection_type', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -74,8 +81,8 @@ _GUICAMERA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=65,
-  serialized_end=189,
+  serialized_start=66,
+  serialized_end=215,
 )
 
 _GUICAMERA.fields_by_name['pose'].message_type = pose_pb2._POSE

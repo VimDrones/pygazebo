@@ -13,13 +13,13 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import vector3d_pb2
+import vector3d_pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='axis.proto',
   package='gazebo.msgs',
-  serialized_pb=_b('\n\naxis.proto\x12\x0bgazebo.msgs\x1a\x0evector3d.proto\"\xa5\x01\n\x04\x41xis\x12\"\n\x03xyz\x18\x01 \x02(\x0b\x32\x15.gazebo.msgs.Vector3d\x12\x13\n\x0blimit_lower\x18\x02 \x02(\x01\x12\x13\n\x0blimit_upper\x18\x03 \x02(\x01\x12\x14\n\x0climit_effort\x18\x04 \x02(\x01\x12\x16\n\x0elimit_velocity\x18\x05 \x02(\x01\x12\x0f\n\x07\x64\x61mping\x18\x06 \x02(\x01\x12\x10\n\x08\x66riction\x18\x07 \x02(\x01')
+  serialized_pb=_b('\n\naxis.proto\x12\x0bgazebo.msgs\x1a\x0evector3d.proto\"\xc5\x01\n\x04\x41xis\x12\"\n\x03xyz\x18\x01 \x02(\x0b\x32\x15.gazebo.msgs.Vector3d\x12\x13\n\x0blimit_lower\x18\x02 \x02(\x01\x12\x13\n\x0blimit_upper\x18\x03 \x02(\x01\x12\x14\n\x0climit_effort\x18\x04 \x02(\x01\x12\x16\n\x0elimit_velocity\x18\x05 \x02(\x01\x12\x0f\n\x07\x64\x61mping\x18\x06 \x02(\x01\x12\x10\n\x08\x66riction\x18\x07 \x02(\x01\x12\x1e\n\x16use_parent_model_frame\x18\x08 \x02(\x08')
   ,
   dependencies=[vector3d_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -83,6 +83,13 @@ _AXIS = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='use_parent_model_frame', full_name='gazebo.msgs.Axis.use_parent_model_frame', index=7,
+      number=8, type=8, cpp_type=7, label=2,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -95,7 +102,7 @@ _AXIS = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=44,
-  serialized_end=209,
+  serialized_end=241,
 )
 
 _AXIS.fields_by_name['xyz'].message_type = vector3d_pb2._VECTOR3D

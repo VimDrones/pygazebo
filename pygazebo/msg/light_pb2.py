@@ -13,18 +13,17 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import header_pb2
-from . import pose_pb2
-from . import vector3d_pb2
-from . import color_pb2
+import pose_pb2
+import vector3d_pb2
+import color_pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='light.proto',
   package='gazebo.msgs',
-  serialized_pb=_b('\n\x0blight.proto\x12\x0bgazebo.msgs\x1a\x0cheader.proto\x1a\npose.proto\x1a\x0evector3d.proto\x1a\x0b\x63olor.proto\"\xd2\x03\n\x05Light\x12\x0c\n\x04name\x18\x01 \x02(\t\x12*\n\x04type\x18\x02 \x01(\x0e\x32\x1c.gazebo.msgs.Light.LightType\x12\x1f\n\x04pose\x18\x03 \x01(\x0b\x32\x11.gazebo.msgs.Pose\x12#\n\x07\x64iffuse\x18\x04 \x01(\x0b\x32\x12.gazebo.msgs.Color\x12$\n\x08specular\x18\x05 \x01(\x0b\x32\x12.gazebo.msgs.Color\x12\x1c\n\x14\x61ttenuation_constant\x18\x06 \x01(\x02\x12\x1a\n\x12\x61ttenuation_linear\x18\x07 \x01(\x02\x12\x1d\n\x15\x61ttenuation_quadratic\x18\x08 \x01(\x02\x12(\n\tdirection\x18\t \x01(\x0b\x32\x15.gazebo.msgs.Vector3d\x12\r\n\x05range\x18\n \x01(\x02\x12\x14\n\x0c\x63\x61st_shadows\x18\x0b \x01(\x08\x12\x18\n\x10spot_inner_angle\x18\x0c \x01(\x02\x12\x18\n\x10spot_outer_angle\x18\r \x01(\x02\x12\x14\n\x0cspot_falloff\x18\x0e \x01(\x02\"1\n\tLightType\x12\t\n\x05POINT\x10\x01\x12\x08\n\x04SPOT\x10\x02\x12\x0f\n\x0b\x44IRECTIONAL\x10\x03')
+  serialized_pb=_b('\n\x0blight.proto\x12\x0bgazebo.msgs\x1a\npose.proto\x1a\x0evector3d.proto\x1a\x0b\x63olor.proto\"\xd2\x03\n\x05Light\x12\x0c\n\x04name\x18\x01 \x02(\t\x12*\n\x04type\x18\x02 \x01(\x0e\x32\x1c.gazebo.msgs.Light.LightType\x12\x1f\n\x04pose\x18\x03 \x01(\x0b\x32\x11.gazebo.msgs.Pose\x12#\n\x07\x64iffuse\x18\x04 \x01(\x0b\x32\x12.gazebo.msgs.Color\x12$\n\x08specular\x18\x05 \x01(\x0b\x32\x12.gazebo.msgs.Color\x12\x1c\n\x14\x61ttenuation_constant\x18\x06 \x01(\x02\x12\x1a\n\x12\x61ttenuation_linear\x18\x07 \x01(\x02\x12\x1d\n\x15\x61ttenuation_quadratic\x18\x08 \x01(\x02\x12(\n\tdirection\x18\t \x01(\x0b\x32\x15.gazebo.msgs.Vector3d\x12\r\n\x05range\x18\n \x01(\x02\x12\x14\n\x0c\x63\x61st_shadows\x18\x0b \x01(\x08\x12\x18\n\x10spot_inner_angle\x18\x0c \x01(\x02\x12\x18\n\x10spot_outer_angle\x18\r \x01(\x02\x12\x14\n\x0cspot_falloff\x18\x0e \x01(\x02\"1\n\tLightType\x12\t\n\x05POINT\x10\x01\x12\x08\n\x04SPOT\x10\x02\x12\x0f\n\x0b\x44IRECTIONAL\x10\x03')
   ,
-  dependencies=[header_pb2.DESCRIPTOR,pose_pb2.DESCRIPTOR,vector3d_pb2.DESCRIPTOR,color_pb2.DESCRIPTOR,])
+  dependencies=[pose_pb2.DESCRIPTOR,vector3d_pb2.DESCRIPTOR,color_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -50,8 +49,8 @@ _LIGHT_LIGHTTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=501,
-  serialized_end=550,
+  serialized_start=487,
+  serialized_end=536,
 )
 _sym_db.RegisterEnumDescriptor(_LIGHT_LIGHTTYPE)
 
@@ -173,8 +172,8 @@ _LIGHT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=84,
-  serialized_end=550,
+  serialized_start=70,
+  serialized_end=536,
 )
 
 _LIGHT.fields_by_name['type'].enum_type = _LIGHT_LIGHTTYPE

@@ -13,13 +13,15 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
+import vector3d_pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='track_visual.proto',
   package='gazebo.msgs',
-  serialized_pb=_b('\n\x12track_visual.proto\x12\x0bgazebo.msgs\"h\n\x0bTrackVisual\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\n\n\x02id\x18\x02 \x01(\r\x12\x1b\n\x13inherit_orientation\x18\x03 \x01(\x08\x12\x10\n\x08min_dist\x18\x04 \x01(\x01\x12\x10\n\x08max_dist\x18\x05 \x01(\x01')
-)
+  serialized_pb=_b('\n\x12track_visual.proto\x12\x0bgazebo.msgs\x1a\x0evector3d.proto\"\xca\x01\n\x0bTrackVisual\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\n\n\x02id\x18\x02 \x01(\r\x12\x1b\n\x13inherit_orientation\x18\x03 \x01(\x08\x12\x10\n\x08min_dist\x18\x04 \x01(\x01\x12\x10\n\x08max_dist\x18\x05 \x01(\x01\x12\x0e\n\x06static\x18\x06 \x01(\x08\x12\x17\n\x0fuse_model_frame\x18\x07 \x01(\x08\x12\"\n\x03xyz\x18\x08 \x01(\x0b\x32\x15.gazebo.msgs.Vector3d\x12\x13\n\x0binherit_yaw\x18\t \x01(\x08')
+  ,
+  dependencies=[vector3d_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -67,6 +69,34 @@ _TRACKVISUAL = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='static', full_name='gazebo.msgs.TrackVisual.static', index=5,
+      number=6, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='use_model_frame', full_name='gazebo.msgs.TrackVisual.use_model_frame', index=6,
+      number=7, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='xyz', full_name='gazebo.msgs.TrackVisual.xyz', index=7,
+      number=8, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='inherit_yaw', full_name='gazebo.msgs.TrackVisual.inherit_yaw', index=8,
+      number=9, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -78,10 +108,11 @@ _TRACKVISUAL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=35,
-  serialized_end=139,
+  serialized_start=52,
+  serialized_end=254,
 )
 
+_TRACKVISUAL.fields_by_name['xyz'].message_type = vector3d_pb2._VECTOR3D
 DESCRIPTOR.message_types_by_name['TrackVisual'] = _TRACKVISUAL
 
 TrackVisual = _reflection.GeneratedProtocolMessageType('TrackVisual', (_message.Message,), dict(

@@ -13,19 +13,18 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import header_pb2
-from . import pose_pb2
-from . import geometry_pb2
-from . import surface_pb2
-from . import visual_pb2
+import pose_pb2
+import geometry_pb2
+import surface_pb2
+import visual_pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='collision.proto',
   package='gazebo.msgs',
-  serialized_pb=_b('\n\x0f\x63ollision.proto\x12\x0bgazebo.msgs\x1a\x0cheader.proto\x1a\npose.proto\x1a\x0egeometry.proto\x1a\rsurface.proto\x1a\x0cvisual.proto\"\xe6\x01\n\tCollision\x12\n\n\x02id\x18\x01 \x02(\r\x12\x0c\n\x04name\x18\x02 \x02(\t\x12\x13\n\x0blaser_retro\x18\x03 \x01(\x01\x12\x14\n\x0cmax_contacts\x18\x04 \x01(\x01\x12\x1f\n\x04pose\x18\x05 \x01(\x0b\x32\x11.gazebo.msgs.Pose\x12\'\n\x08geometry\x18\x06 \x01(\x0b\x32\x15.gazebo.msgs.Geometry\x12%\n\x07surface\x18\x07 \x01(\x0b\x32\x14.gazebo.msgs.Surface\x12#\n\x06visual\x18\x08 \x03(\x0b\x32\x13.gazebo.msgs.Visual')
+  serialized_pb=_b('\n\x0f\x63ollision.proto\x12\x0bgazebo.msgs\x1a\npose.proto\x1a\x0egeometry.proto\x1a\rsurface.proto\x1a\x0cvisual.proto\"\xe6\x01\n\tCollision\x12\n\n\x02id\x18\x01 \x02(\r\x12\x0c\n\x04name\x18\x02 \x02(\t\x12\x13\n\x0blaser_retro\x18\x03 \x01(\x01\x12\x14\n\x0cmax_contacts\x18\x04 \x01(\x01\x12\x1f\n\x04pose\x18\x05 \x01(\x0b\x32\x11.gazebo.msgs.Pose\x12\'\n\x08geometry\x18\x06 \x01(\x0b\x32\x15.gazebo.msgs.Geometry\x12%\n\x07surface\x18\x07 \x01(\x0b\x32\x14.gazebo.msgs.Surface\x12#\n\x06visual\x18\x08 \x03(\x0b\x32\x13.gazebo.msgs.Visual')
   ,
-  dependencies=[header_pb2.DESCRIPTOR,pose_pb2.DESCRIPTOR,geometry_pb2.DESCRIPTOR,surface_pb2.DESCRIPTOR,visual_pb2.DESCRIPTOR,])
+  dependencies=[pose_pb2.DESCRIPTOR,geometry_pb2.DESCRIPTOR,surface_pb2.DESCRIPTOR,visual_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -105,8 +104,8 @@ _COLLISION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=104,
-  serialized_end=334,
+  serialized_start=90,
+  serialized_end=320,
 )
 
 _COLLISION.fields_by_name['pose'].message_type = pose_pb2._POSE
